@@ -1,0 +1,26 @@
+ nav{
+  display: flex;
+  width: 100%;
+  height: 120px;
+  background-color: #4056A1;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  color: white; 
+  position:fixed;
+
+}
+
+.push{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+}
+
+.fa-solid{
+  color: red;
+}
+
+nav, span{
+  font-family: "Bungee" ;
+ }
