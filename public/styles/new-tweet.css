@@ -1,0 +1,33 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+form label {
+  border-bottom: solid;
+  margin-bottom: 2;
+}
+
+form textarea {
+  margin-top: 5px;
+
+}
+
+
+
+button {
+  color: white;
+  background-color: rgb(45, 45, 120);
+}
+
+main section form div {
+  font-family: "Bungee";
+  display: flex;
+  justify-content: space-between;
+}

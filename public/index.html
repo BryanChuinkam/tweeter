@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
 
 
   <!-- External JS -->
@@ -52,25 +54,19 @@
     </div>
   </header>
 
-
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <h1>rrrrrrrrrrrrrrrrrrrrr</h1>
-    <p>The first-known use of Pig Latin dates back to late 16th-century Shakespearean England. Back then, it was called
-      Hog Latin. It later resurfaced in late 19th-century English periodicals. And in 1919, what we now know as Pig
-      Latin enshrined itself in popular culture forever through the song “Pig Latin Love,” sung by Arthur Fields.
-
-      Later, the Three Stooges made it famous in the 1930s by using “ix-nay” and “am-scray” in their short comedy films.
-      If you are a fan, you’ve heard those words. And even if you’ve never heard of the Three Stooges, you may have
-      heard these Pig Latin words in popular usage.
-      <h5>rrrrrrrrrrrrrrrrrrrrr</h5>
-
-      The word “am-scray” is the Pig Latin translation of “scram”—a way to tell someone to go away fast. And the word
-      “ix-nay” means “nix,” a way of suggesting that something be rejected (as in, ix-nay the red shoes, they clash with
-      your pink dress). These examples show how Pig Latin has worked its way into popular English usage.
-
-      If speaking Pig Latin sounds interesting, all you need are a few moments to learn the basics. In a few minutes’
-      time, you should be able to string together some sentences and amaze your friends.</p>
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets/" method="POST">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
 
   </main>
 </body>
