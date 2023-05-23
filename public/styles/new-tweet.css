@@ -11,15 +11,13 @@ form {
 
 form label {
   border-bottom: solid;
-  margin-bottom: 2;
+  margin-bottom: 2px;
 }
 
 form textarea {
   margin-top: 5px;
 
 }
-
-
 
 button {
   color: white;
@@ -30,4 +28,5 @@ main section form div {
   font-family: "Bungee";
   display: flex;
   justify-content: space-between;
+  margin-top: 5px;
 }
