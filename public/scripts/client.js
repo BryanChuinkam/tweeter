@@ -69,6 +69,18 @@ const createTweetElement = function(tweetData) {
 $(document).ready(function() {
   renderTweets(data);
 
+  $("#submit-tweet-form").on("submit", function(event) {
+    event.preventDefault();
+
+    const formValues = $(this).serialize();
+    const actionUrl = $(this).attr("action");
+    const formMethod = $(this).attr("method");
+
+    $.ajax({type: formMethod, url: actionUrl, data: formValues,}).then(function(response) {
+      console.log("response: ", response);
+    });
+  });
+
 });
 
 
