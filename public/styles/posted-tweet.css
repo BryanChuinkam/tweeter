@@ -1,0 +1,68 @@
+.posted-tweets {
+  margin-top: 1em;
+}
+
+.posted-tweets article {
+  border: solid;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.posted-tweets article:hover{
+  box-shadow: 10px 5px 5px gray;
+}
+
+/* Posted tweet headers */
+.tweet-article-headers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-article-headers-left {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-article-headers-right {
+  color: rgb(183, 183, 144);
+}
+
+
+/* The Tweet  */
+.posted-tweet-text {
+  padding-bottom: 1em;
+  border-bottom: solid;
+}
+
+
+
+/* Posted tweet footers */
+.tweet-article-footers {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+.tweet-article-footer-left {
+  font-size: small;
+  font-weight: bold;
+}
+
+.tweet-article-footer-right {
+  color: rgb(82, 82, 190);
+}
+
+/* Footer Icons */
+.fa-flag:hover{
+ color: rgb(128, 123, 100);
+}
+.fa-retweet:hover{
+  color: rgb(128, 123, 100);
+}
+
+.fa-heart:hover{
+  color: rgb(128, 123, 100);
+}
+
