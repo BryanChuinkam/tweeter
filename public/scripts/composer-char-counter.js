@@ -1,9 +1,5 @@
 $(document).ready(function() {
 
-  // $("#tweet-text").on('change', function() {
-  //   console.log('in text box', this); //The this keyword is a reference to the button
-  //   alert('Textarea is changed');
-  // });
   const NUM_CHAR_ALLOWED = 140;
 
   $("#tweet-text").on('input', function() {
