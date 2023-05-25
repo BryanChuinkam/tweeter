@@ -7,7 +7,7 @@
 const renderTweets = function(tweets) {
   for (const tweetobj of tweets) {
     const tweet = createTweetElement(tweetobj);
-    $('.posted-tweets').append(tweet);
+    $('.posted-tweets').prepend(tweet);
   }
 };
 
@@ -61,10 +61,15 @@ $(document).ready(function() {
 
     } else if (tweetText.length > 140) {
       alert("Tweet can't exceed 140 characters!");
-      
+
     } else {
       $.ajax({ type: formMethod, url: actionUrl, data: formValues, })
-        .then(function(response) { console.log('Success: '); });
+        .then(function(response) {
+          console.log('Success: ', response);
+          loadTweets();
+
+        });
+
     }
   });
 
