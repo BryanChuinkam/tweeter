@@ -11,6 +11,11 @@ const renderTweets = function(tweets) {
   }
 };
 
+const escape = function (Tweetstr) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(Tweetstr));
+  return div.innerHTML;
+};
 
 const createTweetElement = function(tweetData) {
   const $tweet = ` <article>
@@ -23,7 +28,7 @@ const createTweetElement = function(tweetData) {
                         <p>${tweetData.user.handle}</p>
                       </div>
                     </header>
-                    <p class="posted-tweet-text"><strong>${tweetData.content.text}</strong> </p>
+                    <p class="posted-tweet-text"><strong>${escape(tweetData.content.text)}</strong> </p>
                     <footer class="tweet-article-footers">
                       <span class="tweet-article-footer-left">${timeago.format(tweetData.created_at)}</span>
                       <div class="tweet-article-footer-right">
@@ -51,10 +56,13 @@ $(document).ready(function() {
   $("#submit-tweet-form").on("submit", function(event) {
     event.preventDefault();
 
-    const formValues = $(this).serialize();
+    const tweetText = $("#tweet-text").val();
+    const formValues = $("#tweet-text").text(tweetText).serialize();
     const actionUrl = $(this).attr("action");
     const formMethod = $(this).attr("method");
-    const tweetText = $("#tweet-text").val();
+    console.log("formValues", formValues);
+
+
 
     if (!tweetText) {
       alert("Please enter some text! ");
@@ -65,14 +73,10 @@ $(document).ready(function() {
     } else {
       $.ajax({ type: formMethod, url: actionUrl, data: formValues, })
         .then(function(response) {
-          console.log('Success: ', response);
           loadTweets();
-
         });
-
     }
   });
-
 });
 
 
