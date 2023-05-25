@@ -1,6 +1,22 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+}
+
+.error {
+  display: none;
+  text-align: center;
+  border: 1px solid;
+  margin: 10px auto;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  max-width: 460px;
+  color: #D8000C;
+  background-color: #dcbbbb;
+  background-image: url('https://i.imgur.com/GnyDvKN.png');
+
 }
 
 form {

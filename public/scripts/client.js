@@ -11,7 +11,7 @@ const renderTweets = function(tweets) {
   }
 };
 
-const escape = function (Tweetstr) {
+const escape = function(Tweetstr) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(Tweetstr));
   return div.innerHTML;
@@ -55,20 +55,21 @@ $(document).ready(function() {
 
   $("#submit-tweet-form").on("submit", function(event) {
     event.preventDefault();
+    $(".error").slideUp();
+
 
     const tweetText = $("#tweet-text").val();
     const formValues = $("#tweet-text").text(tweetText).serialize();
     const actionUrl = $(this).attr("action");
     const formMethod = $(this).attr("method");
-    console.log("formValues", formValues);
-
-
 
     if (!tweetText) {
-      alert("Please enter some text! ");
+      $(".error").text("Please enter some text!");
+      $(".error").slideDown("slow");
 
     } else if (tweetText.length > 140) {
-      alert("Tweet can't exceed 140 characters!");
+      $(".error").text("Tweet can't exceed 140 characters!");
+      $(".error").slideDown("slow");
 
     } else {
       $.ajax({ type: formMethod, url: actionUrl, data: formValues, })
