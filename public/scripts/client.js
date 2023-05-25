@@ -54,9 +54,18 @@ $(document).ready(function() {
     const formValues = $(this).serialize();
     const actionUrl = $(this).attr("action");
     const formMethod = $(this).attr("method");
+    const tweetText = $("#tweet-text").val();
 
-    $.ajax({ type: formMethod, url: actionUrl, data: formValues, })
-      .then(function(response) { console.log('Success: '); });
+    if (!tweetText) {
+      alert("Please enter some text! ");
+
+    } else if (tweetText.length > 140) {
+      alert("Tweet can't exceed 140 characters!");
+      
+    } else {
+      $.ajax({ type: formMethod, url: actionUrl, data: formValues, })
+        .then(function(response) { console.log('Success: '); });
+    }
   });
 
 });
