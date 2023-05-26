@@ -33,6 +33,7 @@
 .posted-tweet-text {
   padding-bottom: 1em;
   border-bottom: solid;
+  flex-wrap: wrap;
 }
 
 

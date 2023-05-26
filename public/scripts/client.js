@@ -55,7 +55,7 @@ $(document).ready(function() {
 
   $("#submit-tweet-form").on("submit", function(event) {
     event.preventDefault();
-    $(".error").slideUp();
+    $(".error").slideUp("fast");
 
 
     const tweetText = $("#tweet-text").val();
@@ -75,6 +75,8 @@ $(document).ready(function() {
       $.ajax({ type: formMethod, url: actionUrl, data: formValues, })
         .then(function(response) {
           loadTweets();
+          $("#tweet-text").val("");
+          $(".counter").val(140);
         });
     }
   });

@@ -32,8 +32,12 @@ form label {
 
 form textarea {
   margin-top: 5px;
-
 }
+
+form textarea:hover {
+  box-shadow: 10px 5px 5px gray;
+}
+
 
 button {
   color: white;
@@ -44,5 +48,11 @@ main section form div {
   font-family: "Bungee";
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
+  margin-top: 10px;
+}
+
+#tweet-text {
+  background-color: #f4f1ec;
+  border: none;
+  outline: none;
 }

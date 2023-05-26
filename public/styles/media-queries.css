@@ -1,0 +1,51 @@
+/* Mobile styles */
+/* Tablet sytles  */
+@media only screen and (max-width: 767px) {
+
+  nav {
+    background-color: rgb(185, 125, 14);
+    background-image: url("https://www.transparenttextures.com/patterns/basketball.png");
+    flex-direction: column;
+  }
+  .push button {
+    background-color: rgb(185, 125, 14);
+  }
+}
+
+/* Tablet sytles  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+  nav {
+    background-color: rgb(185, 125, 14);
+    background-image: url("https://www.transparenttextures.com/patterns/basketball.png");
+  }
+
+  .push button {
+    background-color: rgb(185, 125, 14);
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: space-between;
+
+
+  }
+
+  #pageHeader {
+    width: 30%;
+    padding-top: 0px;
+    margin: 250px 50px 50px 50px;
+    justify-content: center;
+    height: 430px;
+  }
+
+  main {
+    width: 70%;
+    margin: 214px 50px 50px 50px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
